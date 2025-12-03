@@ -1,4 +1,4 @@
-// РД-оос төрсөн огноо авах
+
 export function getBirthDateFromRD(rd: string): Date {
   if (!/^\d{8}$/.test(rd)) {
     throw new Error("РД буруу байна!");
@@ -22,7 +22,6 @@ const day = parseInt(rd.substring(4, 6), 10);
   return new Date(fullYear, month, day);
 }
 
-// Нас гаргах
 export function getAgeFromRD(rd: string): number {
   const birthDate = getBirthDateFromRD(rd);
   console.log(birthDate);
@@ -42,7 +41,6 @@ export function getAgeFromRD(rd: string): number {
   return age;
 }
 
-// Амьдралын хугацаа (жил, сар, өдөр)
 export function getLifeDurationFromRD(rd: string) {
   const birthDate = getBirthDateFromRD(rd);
   const today = new Date();
